@@ -1,0 +1,68 @@
+﻿@model List<CategoryVM>
+
+<div class="row justify-content-between mt-4">
+
+    <div class="col-4">
+        <h4>Categories</h4>
+    </div>
+
+    <div class="col-4 text-end">
+        <a asp-action="Create" class="btn btn-success">Create New</a>
+    </div>
+
+</div>
+
+<hr /> @* Línea separadora *@
+
+<table class="table custom-table">
+    <thead class="table-light">
+        <tr>
+            <th>Name</th>
+            <th style="width:150px">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td class="editable-cell">
+                    @item.Name
+                    <span class="edit-icon">&#9998;</span> @* Icono de pluma Unicode ✎ *@
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.CategoryId" class="btn btn-sm btn-primary">Edit</a>
+                    <form asp-action="Delete" asp-route-id="@item.CategoryId" method="post" class="d-inline">
+                        <button type="submit" class="btn btn-sm btn-danger">Delete</button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<style>
+    /* Fondo clarito por defecto en todas las celdas y texto blanco */
+    .custom-table tbody tr td {
+        background-color: #053345 !important; /* gris muy oscuro */
+        color: white !important; /* texto blanco */
+        position: relative; /* necesario para posicionar el icono */
+        transition: background-color 0.2s;
+    }
+
+    /* Al pasar el cursor sobre toda la fila */
+    .custom-table tbody tr:hover td {
+        color: yellow !important; /* texto negro al pasar el cursor */
+    }
+
+    /* Icono de pluma oculto por defecto */
+    .edit-icon {
+        display: none; /* oculto hasta hover */
+        position: absolute; /* lo ponemos dentro de la celda */
+        right: 10px; /* margen desde la derecha */
+        top: 50%; /* centrado vertical */
+        transform: translateY(-50%); /* corrección de centrado vertical */
+        font-size: 14px; /* tamaño del icono */
+        color: yellow; /* color visible sobre el fondo */
+    }
+
+</style>
