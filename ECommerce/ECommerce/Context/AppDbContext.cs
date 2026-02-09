@@ -45,7 +45,7 @@ namespace ECommerce.Context
                 .OnDelete(DeleteBehavior.Restrict); /*ImpedirElBorrado*/
             });
 
-        }
+        }/*OnModelCreating*/
 
 
 
