@@ -1,7 +1,19 @@
+
+/*Asignar Valores*/
+using Microsoft.EntityFrameworkCore;
+using ECommerce.Context;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+/*Clase Que Contiene La Cadena*/
+builder.Services.AddDbContext<AppDbContext>(options =>
+{
+    //InvocarLaCadena
+    options.UseSqlServer(builder.Configuration.GetConnectionString("CadenaSQL"));
+});
 
 var app = builder.Build();
 
