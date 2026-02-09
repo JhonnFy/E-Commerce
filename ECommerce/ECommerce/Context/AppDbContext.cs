@@ -34,6 +34,17 @@ namespace ECommerce.Context
                     new Category {CategoryId = 2, Name = "Bedroom" }
                     );
             });
+
+            modelBuilder.Entity<Product>(b =>
+            {
+                b.HasKey("ProductId"); /*PK*/
+                b.Property("ProductId").ValueGeneratedOnAdd(); /*Identity*/
+                b.Property("Price").HasColumnType("decimal(10,2)");
+                /*Relación Con Fk*/
+                b.HasOne(b => b.Category).WithMany(p => p.Products).HasForeignKey(b => b.CategoryId)
+                .OnDelete(DeleteBehavior.Restrict); /*ImpedirElBorrado*/
+            });
+
         }
 
 
