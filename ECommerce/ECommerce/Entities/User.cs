@@ -14,5 +14,7 @@ namespace ECommerce.Entities
         [Required]
         public string Type { get; set; }
 
+        //¿Que orden tiene un usuario?
+        public ICollection<Order> Orders { get; set; }
     }
 }
