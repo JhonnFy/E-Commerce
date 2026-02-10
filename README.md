@@ -326,6 +326,11 @@ Crear Categorias Editar Eliminar
   <em>Crear La Vista AddEdit</em>
 </p>
 
+<p align="center">
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/94fd2cd3-79d7-40fa-8add-536556c7bf1c" />
+<br>
+  <em>Href A /Category/Create</em>
+</p>
 
 
 ---
