@@ -45,6 +45,14 @@ namespace ECommerce.Controllers
             }
             return View(entityVM);
         }
+
+        /*Metodo Delete*/
+        public async Task<IActionResult> Delete(int id)
+        {
+            await _categoryService.DeleteAsync(id);
+            return RedirectToAction("Index");
+        }
+
     }
 }
 
