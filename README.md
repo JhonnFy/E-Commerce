@@ -152,7 +152,7 @@ Hola Desde BaseDeDatos
 </p>
 
 <p align="center">
-<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/57b7fc6b-fa7e-4a0d-b68d-c6f334b66f78" />
+  <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/6738a321-e3bc-4672-b889-69716142f79f" />
   <br>
   <em>Asignar La Conexión</em>
 </p>
