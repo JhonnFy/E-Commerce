@@ -240,10 +240,18 @@ Hola Desde BaseDeDatos
 </p>
 
 
+<p align="center">
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/0e77c9bd-7244-485f-b4f1-ee1f0656c148" />
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/73c07883-daaf-4683-8507-0617c32378e1" />
+<br>
+  <em>CategoryVM</em>
+</p>
 
-
-
-
+<p align="center">
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/b6fbc40c-bdc6-499a-bbd4-74832b0d7356" />
+<br>
+  <em>Asignar View Model</em>
+</p>
 
 
 ---
