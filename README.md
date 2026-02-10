@@ -336,6 +336,8 @@ Crear Categorias Editar Eliminar
  <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/239236cc-9184-4f42-88fe-202d88d6e18e" />
  <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/e61981d1-bb2e-43cc-b45d-dca237fc76e8" />
  <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/23a26f0c-2468-4fdb-939d-118dd7464eb2" />
+ <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/836f8316-754c-4f86-b120-e68e7ec50a39" />
+ <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/4c2af353-c979-4303-97c3-65e6f4c9e433" />
 <br>
   <em>Agregar Desde La Vista</em>
 </p>
