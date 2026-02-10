@@ -396,4 +396,12 @@ Edit
   <em>Crear El Metodo DeleteAsync</em>
 </p>
 
+<p align="center">
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/06ea8a87-5e34-4885-9fa0-944f51f1b9b7" />
+<br>
+  <em>Crear El Metodo Para Eliminar</em>
+</p>
+
+
+
 ---
