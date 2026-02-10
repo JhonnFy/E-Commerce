@@ -311,4 +311,13 @@ Crear Categorias Editar Eliminar
   <em>Metodo AddAsync Agregar</em>
 </p>
 
+
+<p align="center">
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/a0f39ca7-0e13-4afd-bf45-ad87c6fea64c" />
+<br>
+  <em>Crear HttpPost HttpGet</em>
+</p>
+
+
+
 ---
