@@ -18,8 +18,11 @@ Hola Desde Interface
 ---
 
 ## BaseDeDatos
-
-Hola Desde BaseDeDatos
+<p align="center">
+ <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/ecaa2d2b-f05d-4ceb-84b1-8fa0e6048ed7" />
+  <br>
+  <em>Diagrama Db</em>
+</p>
 
 ---
 
