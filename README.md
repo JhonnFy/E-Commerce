@@ -374,4 +374,22 @@ En este paso, se reutiliza el formulario de creación, el cual se condicionará 
   <em>Condicionar Category Controller Add-Edit</em>
 </p>
 
+<p align="center">
+ <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/b84f248b-5664-4c92-aaec-c976dc5251a7" />
+ <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/aaa85801-33cf-4d0a-a5f4-3c37d0496811" />
+ <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/6530a7b4-b029-41ca-9a6d-03b838e933e0" />
+ <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/23cc4143-fa22-49b1-9114-afaf7de3e7bd" />
+ <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/211dd8ea-2bed-404f-8c46-2a73e48df748" />
+ <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/ae3379b1-6d66-4c01-b7e5-114a7d16cd27" />
+Edit
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/c1bbc9ec-9c31-4731-ace4-c7eb7c80b37e" />
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/784209ce-3499-4888-b10c-801f8401da0e" />
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/0a96667c-c17c-4804-bcac-5ba2fd6301c1" />
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/c6474f24-b7cb-47a7-ad0f-089297e7c51d" />
+<br>
+  <em>Condicionar BtnAction</em>
+</p>
+
+
+
 ---
