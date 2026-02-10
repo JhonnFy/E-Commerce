@@ -72,10 +72,14 @@ Paso3:Instalar FrameworkCore.SqlServer
 <p align="center">
   <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/cc78dead-57e8-40d8-a8a3-6ab4434657cf" />
   <br>
-  <em>Microsoft.EntityFrameworkCore.SqlServer</em>
+  <em>Paquete1: Microsoft.EntityFrameworkCore.SqlServer</em>
 </p>
 
-
+<p align="center">
+  <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/851f5a97-2c93-4a0e-b9c1-e75a2b564c4f" />
+  <br>
+  <em>Paquete2: Microsoft.EntityFrameworkCore.Tools</em>
+</p>
 
 
 
