@@ -226,7 +226,7 @@ Hola Desde BaseDeDatos
 </p>
 
 <p align="center">
-<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/525cb08c-23d4-4e0d-a7fb-681ecbedf7f4" />
+  <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/18ddc402-eaae-47fd-a59a-a7e5ecbbe580" />
 <br>
   <em>Vincular Vista</em>
 </p>
