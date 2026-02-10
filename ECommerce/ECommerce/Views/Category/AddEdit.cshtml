@@ -1,0 +1,134 @@
+﻿@model CategoryVM
+
+@{
+    // Determina si es creación o edición
+    var titleText = Model.CategoryId == 0 ? "NEW" : "EDIT";
+    var tbnAction = Model.CategoryId == 0 ? "Add" : "Save";
+}
+
+<!-- Fondo de texto gigante -->
+<div class="background-text">
+    <span class="new-text">@titleText</span>
+    CATEGORIES
+</div>
+
+<!-- Modal -->
+<div class="modal fade show" id="categoryModal" tabindex="-1" aria-modal="true" role="dialog" style="display:block; background-color: transparent;">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content floating-modal">
+            <div class="modal-body">
+                <form asp-action="AddEdit" method="post" id="categoryForm">
+                    <input type="hidden" asp-for="CategoryId" />
+
+                    <!-- Solo el input -->
+                    <input asp-for="Name" class="form-control transparent-input" autocomplete="off" placeholder="Enter Category Name">
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </form>
+
+                @if (ViewBag.message != null)
+                {
+                    <div class="alert alert-success text-center" role="alert">
+                        @ViewBag.message
+                    </div>
+                }
+            </div>
+
+            <!-- Footer con botones -->
+            <div class="modal-footer border-0">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="submit" form="categoryForm" class="btn btn-primary">@tbnAction</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var myModalEl = document.getElementById('categoryModal');
+        var closeButton = myModalEl.querySelector('.btn-secondary');
+
+        closeButton.addEventListener('click', function () {
+            window.location.href = '/Category/Index';
+        });
+    });
+</script>
+
+<style>
+    /* Fondo blanco general */
+    body {
+        background-color: white;
+    }
+
+    /* Texto gigante de fondo */
+    .background-text {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(-15deg);
+        font-size: 12rem; /* tamaño original de Categories */
+        font-weight: bold;
+        z-index: 0;
+        user-select: none;
+        pointer-events: none;
+        text-align: left;
+        background: linear-gradient(90deg, #053345, #053345);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+    }
+
+        /* NEW o EDIT encima de Categories, pequeño y amarillo */
+        .background-text .new-text {
+            display: block;
+            font-size: 3rem; /* pequeño comparado con CATEGORIES */
+            color: orange; /* ahora color naranja */
+            margin-left: 0;
+            margin-bottom: -0.3em;
+            letter-spacing: 3px;
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.2);
+        }
+
+    /* Modal flotante sobre el fondo */
+    .floating-modal {
+        background-color: rgba(255,255,255,0.85); /* transparente pero blanca */
+        border: none;
+        border-radius: 10px;
+        padding: 20px;
+        z-index: 10;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    }
+
+    /* Input flotante */
+    .transparent-input {
+        background-color: rgba(255,255,255,0.9);
+        color: black;
+        border: 1px solid rgba(0,0,0,0.2);
+        width: 100%;
+        padding: 10px;
+        font-size: 1rem;
+        margin-bottom: 15px;
+    }
+
+        .transparent-input:focus {
+            background-color: rgba(255,255,255,1);
+            border-color: #0d6efd;
+            box-shadow: 0 0 5px #0d6efd;
+        }
+
+    /* Footer transparente */
+    .modal-footer {
+        background-color: transparent !important;
+    }
+
+        /* Botón Close rojo con letra blanca */
+        .modal-footer .btn-secondary {
+            background-color: red !important;
+            color: white !important;
+            border: none;
+        }
+
+    /* Quitar gris de backdrop de bootstrap */
+    .modal-backdrop {
+        background-color: transparent !important;
+    }
+</style>
