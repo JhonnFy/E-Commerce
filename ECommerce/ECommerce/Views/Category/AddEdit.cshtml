@@ -3,6 +3,7 @@
 @{
     // Determina si es creación o edición
     var titleText = Model.CategoryId == 0 ? "NEW" : "EDIT";
+    var tbnAction = Model.CategoryId == 0 ? "Add" : "Save";
 }
 
 <!-- Fondo de texto gigante -->
@@ -35,7 +36,7 @@
             <!-- Footer con botones -->
             <div class="modal-footer border-0">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="submit" form="categoryForm" class="btn btn-primary">Save changes</button>
+                <button type="submit" form="categoryForm" class="btn btn-primary">@tbnAction</button>
             </div>
         </div>
     </div>
