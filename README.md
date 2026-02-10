@@ -343,6 +343,11 @@ Crear Categorias Editar Eliminar
   <em>Agregar Desde La Vista</em>
 </p>
 
-
+<p align="center">
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/7a87ddd2-2ce0-42d7-9e4b-7666b33fbaa2" />
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/8721bcd0-1548-4b1d-84b9-a73114af9666" />
+<br>
+  <em>Impedir El Ingreso De Valores Null</em>
+</p>
 
 ---
