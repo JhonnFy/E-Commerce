@@ -2,6 +2,8 @@
 /*Asignar Valores*/
 using Microsoft.EntityFrameworkCore;
 using ECommerce.Context;
+using ECommerce.Repositories;
+using ECommerce.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,6 +16,11 @@ builder.Services.AddDbContext<AppDbContext>(options =>
     //InvocarLaCadena
     options.UseSqlServer(builder.Configuration.GetConnectionString("CadenaSQL"));
 });
+
+
+builder.Services.AddScoped(typeof(GenericRepository<>)); /*Espera Una Entidad*/
+builder.Services.AddScoped<CategoryService>();
+
 
 var app = builder.Build();
 

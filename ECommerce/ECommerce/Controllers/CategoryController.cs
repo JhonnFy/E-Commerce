@@ -1,23 +1,18 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using ECommerce.Context;
-using ECommerce.Entities;
-using ECommerce.Models;
+using System.Threading.Tasks;
+using ECommerce.Services;
 
 namespace ECommerce.Controllers
 {
-    public class CategoryController(AppDbContext _dbContext) : Controller
+    public class CategoryController(CategoryService _categoryService) : Controller
     {
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            /*Consultar Todas Las Categorias. Category se usa en el llamado de la vista*/
-            var categories = _dbContext.Category.Select(item =>
-            new CategoryVM
-            {
-                CategoryId = item.CategoryId,
-                Name = item.Name,
-            }).ToList();
-            /*Retornar La Vista Objeto*/
+            /*Consultar Categorias Con El Servicio*/
+            var categories = await _categoryService.GetAllAsync();
             return View(categories);
+            
         }
     }
 }
