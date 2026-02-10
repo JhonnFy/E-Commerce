@@ -213,6 +213,12 @@ Hola Desde BaseDeDatos
   <em>Retornar Las Categorias</em>
 </p>
 
+<p align="center">
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/3a495411-b255-46f2-9bd2-875b7f53cc6a" />
+<br>
+  <em>Crear La Vista Index</em>
+</p>
+
 
 
 
