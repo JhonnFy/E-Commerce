@@ -413,5 +413,10 @@ Edit
 </p>
 
 🛠️ **PASO 11:** Crud Productos
+<p align="center">
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/92b3c449-2fa7-40e8-95e2-e5b4d6394e8a" />
+<br>
+  <em>Agregar ViewModel Prodcut</em>
+</p>
 
 ---
