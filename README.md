@@ -108,6 +108,10 @@ Hola Desde BaseDeDatos
 
 
 🛠️ **PASO5:** Modelado De Tablas
-
+<p align="center">
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/a8f4159b-7a59-4894-9769-64999f40911a" />
+  <br>
+  <em>Category</em>
+</p>
 
 ---
