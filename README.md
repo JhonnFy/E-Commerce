@@ -132,6 +132,13 @@ Hola Desde BaseDeDatos
   <em>Order</em>
 </p>
 
+<p align="center">
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/43b428ad-242f-4964-bff0-a88c74cc5478" />
+  <br>
+  <em>OrderItem</em>
+</p>
+
+
 
 
 ---
