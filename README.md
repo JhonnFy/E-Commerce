@@ -262,5 +262,12 @@ Los repositorios se comunican con los métodos básicos para consultar la DB; en
   <em>Asignar Folder</em>
 </p>
 
+<p align="center">
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/ef56f1b4-93fb-405c-b5fe-3b5cef37c032" />
+<br>
+  <em>Asignar Clase</em>
+</p>
+
+
 
 ---
