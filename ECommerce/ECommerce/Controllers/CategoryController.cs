@@ -47,7 +47,7 @@ namespace ECommerce.Controllers
         }
 
         /*Metodo Delete*/
-        public async Task<IActionResult> Delete(int id)
+        public async Task<IActionResult>Delete(int id)
         {
             await _categoryService.DeleteAsync(id);
             return RedirectToAction("Index");
