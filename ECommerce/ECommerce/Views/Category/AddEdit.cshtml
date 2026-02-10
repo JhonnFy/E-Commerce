@@ -1,7 +1,13 @@
 ﻿@model CategoryVM
 
+@{
+    // Determina si es creación o edición
+    var titleText = Model.CategoryId == 0 ? "NEW" : "EDIT";
+}
+
+<!-- Fondo de texto gigante -->
 <div class="background-text">
-    <span class="new-text">NEW</span>
+    <span class="new-text">@titleText</span>
     CATEGORIES
 </div>
 
@@ -70,11 +76,11 @@
         text-shadow: 2px 2px 8px rgba(0,0,0,0.1);
     }
 
-        /* NEW encima de Categories, pequeño y amarillo */
+        /* NEW o EDIT encima de Categories, pequeño y amarillo */
         .background-text .new-text {
             display: block;
             font-size: 3rem; /* pequeño comparado con CATEGORIES */
-            color: yellow;
+            color: orange; /* ahora color naranja */
             margin-left: 0;
             margin-bottom: -0.3em;
             letter-spacing: 3px;
