@@ -145,6 +145,12 @@ Hola Desde BaseDeDatos
   <em>Crear La Db</em>
 </p>
 
+<p align="center">
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/489d35d6-5010-4063-9c9c-910d9e3d5e4b" />
+  <br>
+  <em>Crear Variables De Entorno</em>
+</p>
+
 
 
 
