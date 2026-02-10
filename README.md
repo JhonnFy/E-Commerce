@@ -25,13 +25,13 @@ Hola Desde BaseDeDatos
 
 
 ## ComoFueCreado
-Paso1:Configuración Inicial Del proyecto
+🛠️ **PASO1:** Configuración Inicial Del proyecto
 <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/e33ff26d-398e-4073-982f-351c60e40906" />
 <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/db95ba8c-631c-4702-9282-562346b7298f" />
 <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/f23f7616-bd52-4370-ac77-f45a57c3e6fd" />
 <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/ace3fce3-642f-46dc-a96c-f804f8e3c362" />
 
-Paso2:Entidades
+🛠️ **PASO2:** Crear Entidades
 <p align="center">
   <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/0e182a59-a801-466b-a7e6-9aa3e457cc42" />
   <br>
@@ -62,7 +62,7 @@ Paso2:Entidades
   <em>User</em>
 </p>
 
-Paso3:Instalar FrameworkCore.SqlServer
+🛠️ **PASO3:** Instalar FrameworkCore.SqlServer
 <p align="center">
   <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/7ca706c7-e025-4c95-8799-fb367214f28f" />
   <br>
@@ -87,7 +87,7 @@ Paso3:Instalar FrameworkCore.SqlServer
   <em>Paquetes Instalados Vrs 9.0.7</em>
 </p>
 
-Paso4: AppDbContext
+🛠️ **PASO4:** AppDbContext
 <p align="center">
 <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/77485e96-2b83-455f-80b1-04c0a4443769" />
   <br>
@@ -107,7 +107,7 @@ Paso4: AppDbContext
 </p>
 
 
-
+🛠️ **PASO5:** Modelado De Tablas
 
 
 ---
