@@ -299,4 +299,6 @@ Los repositorios se comunican con los métodos básicos para consultar la DB; en
 
 🛠️ **PASO 10:** Eventos
 Crear Categorias Editar Eliminar
+
+
 ---
