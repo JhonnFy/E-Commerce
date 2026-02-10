@@ -390,6 +390,10 @@ Edit
   <em>Condicionar BtnAction</em>
 </p>
 
-
+<p align="center">
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/7dd8257c-e775-4e16-a89d-92f24a8c8b8b" />
+<br>
+  <em>Crear El Metodo DeleteAsync</em>
+</p>
 
 ---
