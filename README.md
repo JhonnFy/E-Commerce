@@ -444,4 +444,10 @@ Edit
   <em>Crear El Metodo GetAllAsync En ProductServices</em>
 </p
 
+<p align="center">
+ <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/02da69b3-ddb0-4dab-ac65-3991aafd9b44" />
+<br>
+  <em>Product.Services Metodo Para Retornar Product Id"</em>
+</p
+
 ---
