@@ -114,4 +114,10 @@ Hola Desde BaseDeDatos
   <em>Category</em>
 </p>
 
+<p align="center">
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/b31f3b31-8e90-44b9-83fe-67c489112701" />
+  <br>
+  <em>Product</em>
+</p>
+
 ---
