@@ -297,4 +297,5 @@ Los repositorios se comunican con los métodos básicos para consultar la DB; en
   <em>Modificar Programcs</em>
 </p>
 
+🛠️ **PASO10:** Eventos Para Crear Categorias Editar Eliminar
 ---
