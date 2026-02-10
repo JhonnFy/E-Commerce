@@ -87,6 +87,20 @@ Paso3:Instalar FrameworkCore.SqlServer
   <em>Paquetes Instalados Vrs 9.0.7</em>
 </p>
 
+Paso4: AppDbContext
+<p align="center">
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/77485e96-2b83-455f-80b1-04c0a4443769" />
+  <br>
+  <em>Context</em>
+</p>
+
+<p align="center">
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/ccafe6f6-3619-47cc-b390-721a5aa6e4bd" />
+  <br>
+  <em>AppDbContext</em>
+</p>
+
+
 
 
 
