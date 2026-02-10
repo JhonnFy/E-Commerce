@@ -253,5 +253,7 @@ Hola Desde BaseDeDatos
   <em>Asignar View Model</em>
 </p>
 
+🛠️ **PASO9:** Repositorios & Persistencia De Datos
+Los repositorios se comunican con los métodos básicos para consultar la DB; en este punto se realiza la separación de responsabilidades.
 
 ---
