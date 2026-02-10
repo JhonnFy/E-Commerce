@@ -367,6 +367,9 @@ En este paso, se reutiliza el formulario de creación, el cual se condicionará 
 
 <p align="center">
 <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/d6a459e9-8130-4bc3-acec-0ed56265602b" />
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/4a747561-adba-4831-9b05-035ed5dbce84" />
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/068fd8db-d876-48cc-a871-1e28a83dc972" />
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/21f28f80-0e49-4889-85a6-c2b7c83506e4" />
 <br>
   <em>Condicionar Category Controller Add-Edit</em>
 </p>
