@@ -256,4 +256,11 @@ Hola Desde BaseDeDatos
 🛠️ **PASO9:** Repositorios & Persistencia De Datos
 Los repositorios se comunican con los métodos básicos para consultar la DB; en este punto se realiza la separación de responsabilidades.
 
+<p align="center">
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/8e50e4ee-2084-45d9-9878-a79baf56d145" />
+<br>
+  <em>Asignar Folder</em>
+</p>
+
+
 ---
