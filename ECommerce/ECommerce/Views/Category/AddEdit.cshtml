@@ -1,6 +1,5 @@
 ﻿@model CategoryVM
 
-<!-- Fondo de texto gigante -->
 <div class="background-text">
     <span class="new-text">NEW</span>
     CATEGORIES
@@ -15,7 +14,7 @@
                     <input type="hidden" asp-for="CategoryId" />
 
                     <!-- Solo el input -->
-                    <input asp-for="Name" class="form-control transparent-input" autocomplete="off" placeholder="Enter category name">
+                    <input asp-for="Name" class="form-control transparent-input" autocomplete="off" placeholder="Enter Category Name">
                     <span asp-validation-for="Name" class="text-danger"></span>
                 </form>
 

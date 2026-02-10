@@ -26,6 +26,10 @@ namespace ECommerce.Controllers
         [HttpPost]
         public async Task<IActionResult>AddEdit(CategoryVM entityVM)
         {
+            //Impedir Null, En Categorias
+            ViewBag.message = null;
+            if (!ModelState.IsValid) return View(entityVM);
+
             await _categoryService.AddAsync(entityVM);
             ViewBag.message = "Categoria Agregada";
             return View();
