@@ -195,5 +195,15 @@ Hola Desde BaseDeDatos
 </p>
 
 🛠️ **PASO8:** Mantenimiento De Las Categorias
+<p align="center">
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/cd847dec-3621-40d2-92f2-52c74d9bc8e2" />
+  <br>
+  <em>Controlador </em>
+</p>
 
+<p align="center">
+  <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/e2667ef1-5c80-4c93-af09-da8fd5543bef" />
+<br>
+  <em>Controlador </em>
+</p>
 ---
