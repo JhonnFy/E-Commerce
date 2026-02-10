@@ -139,6 +139,13 @@ Hola Desde BaseDeDatos
 </p>
 
 🛠️ **PASO6:** Crear Cadena De Conexión
+<p align="center">
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/41197357-44c7-4b00-bb54-d7e875afa84f" />
+  <br>
+  <em>Crear La Db</em>
+</p>
+
+
 
 
 ---
