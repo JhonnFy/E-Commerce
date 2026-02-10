@@ -321,6 +321,7 @@ Crear Categorias Editar Eliminar
 <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/ab859ba2-d7bf-42fc-8fa3-56afc466b16f" />
 <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/46d39edb-c912-42fa-8a40-f43ee5ed673d" />
 <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/58920d44-1c23-4a7a-9d61-0971946f6e8e" />
+ <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/f885b12a-1481-401a-a723-9c2dc62af4a4" />
 <br>
   <em>Crear La Vista AddEdit</em>
 </p>
