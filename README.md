@@ -288,4 +288,10 @@ Los repositorios se comunican con los métodos básicos para consultar la DB; en
   <em>Modificar El Controller</em>
 </p>
 
+<p align="center">
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/46043e90-9df6-4aff-a823-a662912687c2" />
+<br>
+  <em>Modificar Programcs</em>
+</p>
+
 ---
