@@ -20,6 +20,7 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 
 builder.Services.AddScoped(typeof(GenericRepository<>)); /*Espera Una Entidad*/
 builder.Services.AddScoped<CategoryService>();
+builder.Services.AddScoped<ProductServices>();
 
 
 var app = builder.Build();
