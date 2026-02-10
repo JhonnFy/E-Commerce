@@ -402,6 +402,14 @@ Edit
   <em>Crear El Metodo Para Eliminar</em>
 </p>
 
-
+<p align="center">
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/1192ee29-1bc5-4cf7-b040-af1a0d3f8630" />
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/df143626-8cb2-4a1b-89d0-92f28d1dd526" />
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/65f1d03f-cfb3-44fd-a33e-bdbbb384ab72" />
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/6de112bd-8f74-4672-89f6-385cf7e19231" />
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/238c787d-8ab1-4aae-a950-cd490ed52058" />
+<br>
+  <em>Agregar La Libreria Swith</em>
+</p>
 
 ---
