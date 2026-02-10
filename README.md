@@ -204,6 +204,6 @@ Hola Desde BaseDeDatos
 <p align="center">
   <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/e2667ef1-5c80-4c93-af09-da8fd5543bef" />
 <br>
-  <em>Controlador </em>
+  <em>CategoryController</em>
 </p>
 ---
