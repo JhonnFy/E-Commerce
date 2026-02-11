@@ -35,15 +35,15 @@
 
     <!-- Contenedor De Productos -->
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4 py-4">
-        @foreach (var n in new int[] { 1, 2, 3, 4, 5 })
+        @foreach (var p in Model.Products)
         {
             <div class="col">
                 <div class="card shadow-sm">
-                    <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="" />
+                    <img class="card-img-top" src="~/images/@p.ImageName" alt="" />
                     <div class="card-body p-4">
                         <div class="text-center">
-                            <h5 class="fw-bolder">Fancy Product</h5>
-                            $1000000
+                            <h5 class="fw-bolder">@p.Name</h5>
+                            @p.Price.ToString("C2")
                         </div>
                     </div>
                     <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
@@ -67,6 +67,11 @@
             </div>
             <div class="modal-body">
                 <div class="row row-cols-2 g-2">
+                    <div class="col d-grid">
+                        <a class="btn btn-outline-dark">
+                            All Categories
+                        </a>
+                    </div>
                     @foreach (var category in Model.Categories)
                     {
                         <div class="col d-grid">
