@@ -30,8 +30,13 @@ Hola Desde Interface
 ---
 
 ## Plantilla
-Plantilla base para las imágenes de las categorías
+<p align="center">
 <img width="1175" height="499" alt="image" src="https://github.com/user-attachments/assets/dee1e140-78fa-407d-9298-5ea07e1e1d19" />
+<br>
+  <em>Plantilla base para las imágenes de las categorías</em>
+</p>
+
+
 
 ---
 
