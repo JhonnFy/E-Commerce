@@ -503,4 +503,10 @@ Las imágenes serán alojadas en wwwroot\images
 <br>
   <em>Preparar Img</em>
 </p>
+
+<p align="center">
+ <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/7cd63d2b-35eb-4c5d-ab08-f93011952b13" />
+<br>
+  <em>Rutas Locales Por Cat</em>
+</p>
 ---
