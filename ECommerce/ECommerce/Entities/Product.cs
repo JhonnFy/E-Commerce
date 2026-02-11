@@ -15,6 +15,8 @@ namespace ECommerce.Entities
         public int Stock { get; set; }
         public string? ImageName { get; set; } = null; /*Pueden Ingresar Vacios*/
 
+        //Propiedad Para Fecha
+        public DateTime CreatedAt { get; set; } = DateTime.Now;
 
         //Fk Category
         public Category? Category { get; set; }
