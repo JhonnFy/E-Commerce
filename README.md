@@ -601,6 +601,6 @@ Personalizar El Index
   <em>Index</em>
 </p>
 
-
+🛠️ **PASO 14:** Product Catalog
 
 ---
