@@ -491,4 +491,10 @@ Las imágenes serán alojadas en wwwroot\images
   <em>Completar Los Metodos ProductController</em>
 </p>
 
+<p align="center">
+ <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/1d165d2a-3d39-4374-9784-3c9b67d795f8" />
+ <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/78b616e7-f9cd-4fd7-bee0-5934281320bd" />
+<br>
+  <em>Crear La Vista Index</em>
+</p>
 ---
