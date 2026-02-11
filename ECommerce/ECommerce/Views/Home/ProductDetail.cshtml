@@ -15,21 +15,26 @@
             <!-- Información derecha -->
             <div class="col-md-6">
                 <!-- Name -->
-                <h1 class="display-5 fw-bold mb-3">@Model.Name</h1>
+                <h1 class="display-5 fw-bold mb-1">@Model.Name</h1>
 
                 <!-- Price -->
-                <div class="fs-5 mb-3 text-primary">
-                    @Model.Price.ToString("C2")
+                <div class="fs-5 mb-1 text-primary">
+                    @Model.Price.ToString("N0")
                 </div>
 
                 <!-- Description -->
-                <div class="text-muted mb-2">
+                <div class="text-muted mb-0">
                     @Html.Raw(Model.Description)
                 </div>
 
-                <!-- Stock debajo de la descripción -->
+                <!-- Stock -->
                 <div class="text-muted">
                     Stock: @Model.Stock
+                </div>
+
+                <!-- Fecha de creación -->
+                <div class="text-muted">
+                    CreatedAt: @Model.CreatedAt.ToString("yyyy-MM-dd")
                 </div>
             </div>
 

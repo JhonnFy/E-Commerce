@@ -1,6 +1,7 @@
 ﻿using ECommerce.Entities;
 using ECommerce.Models;
 using ECommerce.Repositories;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.IdentityModel.Tokens;
 using System.Linq.Expressions;
@@ -39,6 +40,7 @@ namespace ECommerce.Services
                     Price = item.Price,
                     Stock = item.Stock,
                     ImageName = item.ImageName,
+                    CreatedAt = item.CreatedAt,
                 }).ToList();
 
             return productVM;
@@ -67,7 +69,8 @@ namespace ECommerce.Services
                     Description = product.Description,
                     Price = product.Price,
                     Stock = product.Stock,
-                    ImageName = product.ImageName
+                    ImageName = product.ImageName,
+                    CreatedAt = product.CreatedAt,
                 };
             }
 
@@ -103,7 +106,8 @@ namespace ECommerce.Services
                 Description = viewModel.Description,
                 Price = viewModel.Price,
                 Stock = viewModel.Stock,
-                ImageName = viewModel.ImageName
+                ImageName = viewModel.ImageName,
+                CreatedAt = DateTime.Now,
             };
 
 
@@ -147,8 +151,8 @@ namespace ECommerce.Services
             product.Price = viewModel.Price;
             product.Stock = viewModel.Stock;
             product.ImageName = viewModel.ImageName;
-
-        await _productRepository.EditAsync(product);
+            product.CreatedAt = DateTime.Now;
+            await _productRepository.EditAsync(product);
 
         }
 
@@ -185,6 +189,7 @@ namespace ECommerce.Services
                     Price = item.Price,
                     Stock = item.Stock,
                     ImageName = item.ImageName,
+                    CreatedAt = item.CreatedAt,
                 }).ToList();
 
             return productVM;
