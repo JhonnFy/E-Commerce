@@ -20,6 +20,16 @@ namespace ECommerce.Controllers
             return View(catalog);
         }
 
+        public async Task<IActionResult> FilterByCategory(int id, string name)
+        {
+            var categories = await _categoryService.GetAllAsync();
+            var products = await _productServices.GetCatalogAsync(categoryId:id);
+
+            var catalog = new CatalogVM { Categories = categories, Products = products, filterBy=name };
+
+            return View("index",catalog);
+        }
+
         public IActionResult Privacy()
         {
             return View();

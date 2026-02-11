@@ -33,6 +33,16 @@
         </div>
     </div>
 
+
+    @if(Model.filterBy != "" && Model.filterBy != null)
+    {
+        <div class="row bg-light p-2 mt-2">
+            <div class="col-sm-12">
+                @Model.filterBy
+            </div>
+        </div>
+    }
+
     <!-- Contenedor De Productos -->
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4 py-4">
         @foreach (var p in Model.Products)
@@ -68,14 +78,22 @@
             <div class="modal-body">
                 <div class="row row-cols-2 g-2">
                     <div class="col d-grid">
-                        <a class="btn btn-outline-dark">
+                        <a class="btn btn-outline-dark"
+                         asp-controller="Home" asp-action="FilterByCategory"
+                        asp-route-id="0"
+                        asp-route-name="All Categories"
+                        >
                             All Categories
                         </a>
                     </div>
                     @foreach (var category in Model.Categories)
                     {
                         <div class="col d-grid">
-                            <a class="btn btn-outline-dark">
+                            <a class="btn btn-outline-dark"
+                                asp-controller="Home" asp-action="FilterByCategory"
+                                asp-route-id="@category.CategoryId" 
+                                asp-route-name = "@category.Name"
+                            >
                                 @category.Name
                             </a>
                         </div>
