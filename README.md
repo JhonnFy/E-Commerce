@@ -27,7 +27,6 @@ Hola Desde Interface
 
 ---
 
----
 
 ## ContenedorImg
 <p align="center">
