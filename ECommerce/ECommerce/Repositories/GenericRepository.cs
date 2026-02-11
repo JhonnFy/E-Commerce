@@ -13,11 +13,19 @@ namespace ECommerce.Repositories
         }
 
         /*Fk Product-Cat Inner Prod-Cat*/
-        public async Task<IEnumerable<TEntity>> GetAllAsync(Expression<Func<TEntity, object>>[] includes)
+        public async Task<IEnumerable<TEntity>> GetAllAsync(
+            Expression<Func<TEntity, bool>>[]? conditions = null, //Condicionales Where
+            Expression<Func<TEntity, object>>[]? includes = null
+            )
         {
             IQueryable<TEntity> query = _dbContext.Set<TEntity>();
-           
-            foreach(var include in includes) query = query.Include(include);
+                       
+            if(conditions is not null)
+              foreach(var condition in conditions) query = query.Where(condition);
+
+            if(includes is not null)
+             foreach (var include in includes) query = query.Include(include);
+
 
             return await query.ToListAsync();
 

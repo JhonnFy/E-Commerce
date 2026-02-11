@@ -159,5 +159,36 @@ namespace ECommerce.Services
             var product = await _productRepository.GetByIdAsync(id);
             await _productRepository.DeleteAsync(product);
         }
+
+
+        //Metodo Para Alimentar Catalog
+        public async Task<IEnumerable<ProductVM>> GetCatalogAsync(int categoryId=0, string search = "")
+        {
+
+            //Condicionales
+            var conditions = new List<Expression<Func<Product,bool>>>
+                {
+                    x=> x.Stock > 0, //Stock Mayor a 0
+                };
+
+            if (categoryId != 0) conditions.Add(x => x.CategoryId == categoryId);
+            if (!string.IsNullOrEmpty(search)) conditions.Add(x => x.Name.Contains(search));
+
+            var products = await _productRepository.GetAllAsync(conditions: conditions.ToArray());
+
+            var productVM = products.Select(item =>
+                new ProductVM
+                {
+                    ProductId = item.ProductId,
+                    Name = item.Name,
+                    Description = item.Description,
+                    Price = item.Price,
+                    Stock = item.Stock,
+                    ImageName = item.ImageName,
+                }).ToList();
+
+            return productVM;
+        }
+
     }
 }
