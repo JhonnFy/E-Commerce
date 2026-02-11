@@ -1,0 +1,56 @@
+﻿@model List<ProductVM>
+
+<div class="row justify-content-between mt-4">
+    <div class="col-4">
+        <h4>Products</h4>
+    </div>
+
+    <div class="col-4 text-end">
+        <a href="/Product/AddEdit" class="btn btn-success">Create New</a>
+    </div>
+</div>
+
+<hr />
+
+<table class="table custom-table">
+    <thead class="table-light">
+        <tr>
+            <th>Name</th>
+            <th>Category</th>
+            <th>Price</th>
+            <th>Stock</th>
+            <th style="width:150px">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Name</td>
+                <td>@item.Category.Name</td>
+                <td>@item.Price</td>
+                <td>@item.Stock</td>
+                <td>
+                    <a href="/Product/AddEdit/@item.ProductId" class="btn btn-sm btn-primary">Edit</a>
+                    <form asp-action="Delete" asp-route-id="@item.ProductId" method="post" class="d-inline">
+                        <button type="submit" class="btn btn-sm btn-danger">Delete</button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<style>
+    .custom-table tbody tr td {
+        background-color: #053345 !important;
+        color: white !important;
+        position: relative;
+        transition: background-color 0.2s;
+        vertical-align: middle;
+    }
+
+    .custom-table tbody tr:hover td {
+        color: yellow !important;
+    }
+</style>
