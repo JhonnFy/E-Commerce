@@ -17,6 +17,12 @@ Aplicación desarrollada en .NET 9 MVC
 Hola Desde Interface
 
 <p align="center">
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/23bee909-d7f3-414f-a74d-2add568d039c" />
+  <br>
+  <em>IGU Crear Producto</em>
+</p>
+
+<p align="center">
 <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/6e0ee24f-e264-4af3-bafa-95531d0655f3" />
   <br>
   <em>IGU Editar Productos</em>
