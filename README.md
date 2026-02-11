@@ -39,7 +39,13 @@ Hola Desde Interface
 <p align="center">
 <img width="1175" height="499" alt="image" src="https://github.com/user-attachments/assets/319c10fa-3d70-4b8c-8152-e4eaa9080119" />
 <br>
-  <em>Cat_Fashion1</em>
+  <em>Fashion1</em>
+</p>
+
+<p align="center">
+ <img width="1175" height="499" alt="image" src="https://github.com/user-attachments/assets/851ad7e2-b6d3-4205-8e07-0a3d7ef3a0db" />
+<br>
+  <em>Fashion2</em>
 </p>
 
 ---
