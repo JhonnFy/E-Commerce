@@ -592,4 +592,17 @@ Las imágenes serán alojadas en wwwroot\images
 <br>
   <em>Rutas Locales Por Cat</em>
 </p>
+
+Personalizar El Index
+
+<p align="center">
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/89798c58-1281-49d6-aef6-259e8c3efcac" />
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/daa6e883-1ab7-4497-ba23-00f0f7c2c6b6" />
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/e4ea1374-69f4-49ae-a751-09fc78ff94c2" />
+<br>
+  <em>Index</em>
+</p>
+
+
+
 ---
