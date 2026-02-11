@@ -462,6 +462,11 @@ Edit
   <em>ProductServices.Product Actualizar Producto</em>
 </p
 
+<p align="center">
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/8f4267a9-6eec-41be-b9c5-9ecb368b0032" />
+<br>
+  <em>ProductServices.Product Eliminar Producto</em>
+</p
 
 
 ---
