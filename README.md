@@ -54,6 +54,25 @@ Hola Desde Interface
   <em>Fashion3</em>
 </p>
 
+<p align="center">
+<img width="1175" height="499" alt="image" src="https://github.com/user-attachments/assets/f2e07299-3a38-4b0b-9973-5e6903a2c85b" />
+<br>
+  <em>Sports1</em>
+</p>
+
+<p align="center">
+<img width="1175" height="499" alt="image" src="https://github.com/user-attachments/assets/0201ecdc-bb3c-4def-b663-13fae9b72a4c" />
+<br>
+  <em>Sports2</em>
+</p>
+
+<p align="center">
+<img width="1175" height="499" alt="image" src="https://github.com/user-attachments/assets/9aad8182-811a-4fb3-a961-af78862a149f" />
+<br>
+  <em>Sports3</em>
+</p>
+
+
 ---
 
 ---
