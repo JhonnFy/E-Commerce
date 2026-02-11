@@ -1,20 +1,24 @@
 using System.Diagnostics;
+using System.Threading.Tasks;
+using ECommerce.Entities;
 using ECommerce.Models;
+using ECommerce.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ECommerce.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController (
+        //Intanciar Servicios
+        CategoryService _categoryService,
+        ProductServices _productServices
+        ) : Controller
     {
-        private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
+        public async Task<IActionResult> Index()
         {
-            _logger = logger;
-        }
+            var categories = await _categoryService.GetAllAsync();
+            var products = await _productServices.GetCatalogAsync();
+            var catalog = new CatalogVM { Categories = categories, Products = products };
 
-        public IActionResult Index()
-        {
             return View();
         }
 
