@@ -468,5 +468,7 @@ Edit
   <em>ProductServices.Product Eliminar Producto</em>
 </p
 
+🛠️ **PASO 12:** Imagenes Para Productos
+Las imágenes serán alojadas en wwwroot\images
 
 ---
