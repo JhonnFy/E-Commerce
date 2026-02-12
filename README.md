@@ -639,6 +639,7 @@ El presente ecommerce simulará el proceso de pago correspondiente a los product
 
 <p align="center">
  <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/64682807-b6ff-4ff8-b7f3-f289f5238acb" />
+ <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/27263926-6d29-4f90-9944-deac569793a2" />
 <br>
   <em>Crear Un Servicio</em>
 </p>
