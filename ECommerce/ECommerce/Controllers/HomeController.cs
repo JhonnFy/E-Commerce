@@ -1,11 +1,8 @@
-using ECommerce.Entities;
 using ECommerce.Models;
 using ECommerce.Services;
 using ECommerce.Utilities;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Identity.Client;
 using System.Diagnostics;
-using System.Text.Json;
 
 namespace ECommerce.Controllers
 {
@@ -105,7 +102,7 @@ namespace ECommerce.Controllers
 
             return View("ViewCart",cart);
         }
-
+         
 
         public IActionResult Privacy()
         {
