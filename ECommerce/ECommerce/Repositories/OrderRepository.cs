@@ -1,5 +1,6 @@
 ﻿using ECommerce.Context;
 using ECommerce.Entities;
+using Microsoft.EntityFrameworkCore;
 
 namespace ECommerce.Repositories
 {
@@ -35,5 +36,16 @@ namespace ECommerce.Repositories
                 throw;
             }
         }
+
+        public async Task<IEnumerable<Order>>GetAllWithDetailAsync(int userId)
+        {
+            var orders = await _dbContext.Order.Where(x => x.UserId == userId)
+                .Include(x => x.OrderItems).ThenInclude(x => x.Product).ToListAsync();
+
+            return orders;
+        }
+
+
+
     }
 }

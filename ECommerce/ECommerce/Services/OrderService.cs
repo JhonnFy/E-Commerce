@@ -24,5 +24,26 @@ namespace ECommerce.Services
             await _orderRepository.AddAsync(order);
 
         }
+
+        public async Task<List<OrderVM>>GetAllByUserAsync(int userId)
+        {
+            var orders = await _orderRepository.GetAllWithDetailAsync(userId);
+
+            var ordersVM = orders.Select(x=> new OrderVM
+            {
+                OrderDate = x.OrderDate.ToString("dd/MM/yyyy"),
+                TotalAmount = x.TotalAmount.ToString("C2"),
+                OrderItems = x.OrderItems.Select(x=> new OrderItemVM
+                {
+                    ProductName = x.Product.Name,
+                    Quantity = x.Quantity,
+                    Price = x.Price.ToString("C2")
+                }).ToList()
+            }).ToList();
+
+            return ordersVM;
+        }
+
+
     }
 }
