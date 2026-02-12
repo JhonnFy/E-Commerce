@@ -40,11 +40,16 @@
                     </td>
                     <td>@item.Name</td>
                     <td>@item.Price.ToString("C2")</td>
+
                     <td>@item.Quantity</td>
-                    <td>@((item.Price* item.Quantity).ToString("C2"))</td>
-                    <td>
-                        <a href="/Category/AddEdit/@item.ProductId" class="btn btn-sm btn-primary">Edit</a>
+                    <td>@((item.Price * item.Quantity).ToString("C2"))</td>
+
+                    <td style="width:120px">
+                        <a href="/Home/RemoveItemToCart?productId=@item.ProductId" class="btn btn-sm btn-danger">
+                            <i class="fa-solid fa-trash-can"></i>
+                        </a>
                     </td>
+
                 </tr>
             }
         </tbody>

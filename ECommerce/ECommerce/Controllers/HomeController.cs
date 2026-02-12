@@ -93,6 +93,20 @@ namespace ECommerce.Controllers
         }
 
 
+        //Metodo Para Remover Del Carro
+        public IActionResult RemoveItemToCart(int productId)
+        {
+            var cart = HttpContext.Session.Get<List<CartItemVM>>("Cart");
+            var product = cart.Find(x => x.ProductId == productId);
+
+            cart.Remove(product!);
+
+            HttpContext.Session.Set("Cart", cart);
+
+            return View("ViewCart",cart);
+        }
+
+
         public IActionResult Privacy()
         {
             return View();
