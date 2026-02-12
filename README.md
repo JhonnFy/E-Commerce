@@ -590,5 +590,12 @@ Personalizar El Index
 </p>
 
 🛠️ **PASO 14:** Carrito De Compras
+<p align="center">
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/5f76760e-47e0-4f7f-8c69-f66df0b84a4b" />
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/a1a26d78-6911-4fbe-b1a0-a93dd954cddb" />
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/692500f8-9a41-4085-97b9-34e60a932036" />
+<br>
+  <em>Index</em>
+</p>
 
 ---
