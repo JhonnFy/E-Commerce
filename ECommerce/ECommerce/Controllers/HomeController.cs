@@ -85,6 +85,14 @@ namespace ECommerce.Controllers
             return View("ProductDetail", product);
         }
 
+        //Metodo Para Retornar Los Producos Del Carro
+        public IActionResult ViewCart()
+        {
+            var cart = HttpContext.Session.Get<List<CartItemVM>>("Cart") ?? new List<CartItemVM>();
+            return View(cart);
+        }
+
+
         public IActionResult Privacy()
         {
             return View();
