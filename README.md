@@ -599,4 +599,13 @@ Personalizar El Index
   <em>Vista Parcial Contador Productos Del Carro</em>
 </p>
 
+<p align="center">
+ <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/0414b3f6-3966-4cce-a264-34cf2ce0ebeb" />
+ <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/41323dd6-a3a6-44f3-a457-36d2180c829a" />
+ <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/5779c240-a369-4521-bc49-b5fb5001a11f" />
+ <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/b5f4e96d-7d9d-45fb-87bf-d37d4f674b5a" />
+<br>
+  <em>Seleccionados</em>
+</p>
+
 ---
