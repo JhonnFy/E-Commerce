@@ -631,5 +631,10 @@ El presente ecommerce simulará el proceso de pago correspondiente a los product
   <em>Repositorio General Para Las 3 Entidades</em>
 </p>
 
+<p align="center">
+ <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/308c98b7-d5e1-44e7-a6cc-9af27ece881f" />
+<br>
+  <em>Re-Escribir El Metodo</em>
+</p>
 
 ---
