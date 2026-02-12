@@ -1,32 +1,74 @@
-﻿@{
+﻿@model CatalogVM;
+@{
     ViewData["Title"] = "Home Page";
 }
 
-<!-- Cargar Bootstrap Icons (si no lo tienes ya) -->
+<!-- Url Test -->
+<!-- https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css -->
+
+<!-- Cargar Bootstrap Icons -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
-<div class="row bg-light mt-4 p-4">
-    <!-- Botón Categories -->
-    <div class="col-12 col-md-3 mb-3">
-        <div class="d-grid">
-            <button type="button" class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                Categories
-            </button>
-        </div>
-    </div>
+<div class="container mt-4">
 
-    <!-- Barra de búsqueda -->
-    <div class="col-12 col-md-9">
-        <div class="input-group">
-            <input type="text" class="form-control" placeholder="Search..." autocomplete="off" />
-            <button class="btn btn-outline-secondary" type="button">
-                <i class="bi bi-search"></i>
-            </button>
+    <!-- Fila superior: Categories a la izquierda, búsqueda a la derecha -->
+    <div class="row mb-3 align-items-center">
+        <!-- Botón Categories izquierda -->
+        <div class="col-12 col-md-3">
+            <div class="d-grid">
+                <button type="button" class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Categories
+                </button>
+            </div>
         </div>
+
+        <!-- Barra de búsqueda derecha -->
+        <div class="col-12 col-md-9 mt-2 mt-md-0">
+            <form asp-controller="Home" asp-action="FilterBySearch" method="post">
+                <div class="input-group">
+                    <input type="text" class="form-control" name="value" placeholder="What Are You Looking For?" autocomplete="off" />
+                    <button class="btn btn-outline-secondary" type="submit">
+                        <i class="bi bi-search"></i>
+                    </button>
+                </div>
+            </form>
+        </div>
+
+
+    @if(Model.filterBy != "" && Model.filterBy != null)
+    {
+        <div class="row bg-light p-2 mt-2">
+            <div class="col-sm-12">
+                @Model.filterBy
+            </div>
+        </div>
+    }
+
+    <!-- Contenedor De Productos -->
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4 py-4">
+        @foreach (var p in Model.Products)
+        {
+            <div class="col">
+                <div class="card shadow-sm">
+                    <img class="card-img-top" src="~/images/@p.ImageName" alt="" />
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <h5 class="fw-bolder">@p.Name</h5>
+                            @p.Price.ToString("C2")
+                        </div>
+                    </div>
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center">
+                            <a class="btn btn-outline-dark mt-auto" href="/Home/ProductDetail?id=@p.ProductId" role="button">View Detail</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
     </div>
 </div>
 
-<!-- Modal -->
+<!-- Modal de Categories -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-scrollable">
         <div class="modal-content">
@@ -36,10 +78,25 @@
             </div>
             <div class="modal-body">
                 <div class="row row-cols-2 g-2">
-                    @foreach (var n in new int[] { 1, 2, 3, 4, 5 })
+                    <div class="col d-grid">
+                        <a class="btn btn-outline-dark"
+                         asp-controller="Home" asp-action="FilterByCategory"
+                        asp-route-id="0"
+                        asp-route-name="All Categories"
+                        >
+                            All Categories
+                        </a>
+                    </div>
+                    @foreach (var category in Model.Categories)
                     {
                         <div class="col d-grid">
-                            <a class="btn btn-outline-dark w-100">Category @n</a>
+                            <a class="btn btn-outline-dark"
+                                asp-controller="Home" asp-action="FilterByCategory"
+                                asp-route-id="@category.CategoryId" 
+                                asp-route-name = "@category.Name"
+                            >
+                                @category.Name
+                            </a>
                         </div>
                     }
                 </div>

@@ -1,21 +1,88 @@
-using System.Diagnostics;
+using ECommerce.Entities;
 using ECommerce.Models;
+using ECommerce.Services;
+using ECommerce.Utilities;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Identity.Client;
+using System.Diagnostics;
+using System.Text.Json;
 
 namespace ECommerce.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController (
+        //Intanciar Servicios
+        CategoryService _categoryService,
+        ProductServices _productServices
+        ) : Controller
     {
-        private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
+        public async Task<IActionResult> Index()
         {
-            _logger = logger;
+            var categories = await _categoryService.GetAllAsync();
+            var products = await _productServices.GetCatalogAsync();
+            var catalog = new CatalogVM { Categories = categories, Products = products };
+
+            return View(catalog);
         }
 
-        public IActionResult Index()
+
+        //Filter by category
+        public async Task<IActionResult> FilterByCategory(int id, string name)
         {
-            return View();
+            var categories = await _categoryService.GetAllAsync();
+            var products = await _productServices.GetCatalogAsync(categoryId:id);
+
+            var catalog = new CatalogVM { Categories = categories, Products = products, filterBy=name};
+
+            return View("Index", catalog);
+        }
+
+        //Search
+        public async Task<IActionResult> FilterBySearch(string value)
+        {
+            var categories = await _categoryService.GetAllAsync();
+            var products = await _productServices.GetCatalogAsync(search: value);
+
+            var catalog = new CatalogVM { Categories = categories, Products = products, filterBy = $"Results for: {value}"};
+
+            return View("Index",catalog);
+        }
+
+
+        //Metodo Para El Detalle del Producto
+        public async Task<IActionResult>ProductDetail(int id)
+        {
+            var product = await _productServices.GetByIdAsync(id);
+            return View(product);
+        }
+
+        [HttpPost]
+        //Carrito De Compras
+        public async Task<IActionResult> AddItemToCart(int productId, int quantity)
+        {
+            //Retornar Id
+            var product = await _productServices.GetByIdAsync(productId);
+
+            var cart = HttpContext.Session.Get<List<CartItemVM>>("Cart")?? new List<CartItemVM>();
+
+            if (cart.Find(x=> x.ProductId == productId) == null)
+            {
+                cart.Add(new CartItemVM
+                {
+                    ProductId = productId,
+                    ImageName = product.ImageName,
+                    Name = product.Name,
+                    Price = product.Price,
+                    Quantity = quantity
+                });
+            }else
+            {
+                var updateProduct = cart.Find(x => x.ProductId == productId);
+                updateProduct!.Quantity += quantity;
+            }
+
+            HttpContext.Session.Set("Cart", cart);
+            ViewBag.message = "Product Added To Cart";
+            return View("ProductDetail", product);
         }
 
         public IActionResult Privacy()

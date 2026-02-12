@@ -1,0 +1,23 @@
+﻿<!-- Agregar en tu _Layout.cshtml dentro del <head> -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+
+<!-- Código del carrito en la barra de navegación -->
+@using ECommerce.Utilities;
+
+@{
+    int cartCount = 0;
+
+    if (Context.Session.Get<List<CartItemVM>>("Cart") != null)
+    {
+        var cart = Context.Session.Get<List<CartItemVM>>("Cart");
+        cartCount = cart.Count();
+    }
+}
+
+<li class="nav-item ms-auto">
+    <a class="btn btn-outline-dark" href="#">
+        <i class="fa-solid fa-cart-shopping"></i> <!-- Icono del carrito -->
+        Cart
+        <span class="badge bg-dark text-white ms-1 rounded-pill">@cartCount</span>
+    </a>
+</li>

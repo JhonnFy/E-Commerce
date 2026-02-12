@@ -22,6 +22,8 @@ builder.Services.AddScoped(typeof(GenericRepository<>)); /*Espera Una Entidad*/
 builder.Services.AddScoped<CategoryService>();
 builder.Services.AddScoped<ProductServices>();
 
+//Temporal De Usuario
+builder.Services.AddSession(options => { options.IdleTimeout = TimeSpan.FromMinutes(30);});
 
 var app = builder.Build();
 
@@ -30,6 +32,9 @@ if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");
 }
+
+app.UseSession();
+
 app.UseRouting();
 
 app.UseAuthorization();
