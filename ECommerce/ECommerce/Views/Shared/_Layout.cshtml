@@ -8,6 +8,26 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/ECommerce.styles.css" asp-append-version="true" />
+
+    <style>
+        /* Dropdown ultra compacto, solo ancho del texto */
+        .navbar-nav .dropdown-menu {
+            min-width: auto !important; /* ancho según contenido */
+            width: auto !important;
+            padding: 0 !important; /* quitar padding vertical */
+            font-size: 0.875rem;
+            border-radius: 0.25rem;
+        }
+
+        .navbar-nav .dropdown-item {
+            padding: 2px 8px !important; /* padding mínimo */
+            white-space: nowrap; /* que no haga wrap */
+        }
+
+        .navbar-nav .dropdown-divider {
+            margin: 2px 0 !important; /* menos espacio entre items */
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -38,7 +58,7 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Dropdown
-                            </a> 
+                            </a>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item text-dark" href="/User/MyOrders">My Orders</a></li>
                                 <li><hr class="dropdown-divider"></li>
@@ -68,5 +88,3 @@
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
-
-
