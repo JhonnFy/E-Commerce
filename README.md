@@ -611,6 +611,11 @@ Personalizar El Index
 El presente ecommerce simulará el proceso de pago correspondiente a los productos seleccionados por el usuario en su carrito de compras.
 ⚠️ Aclaración: Este desarrollo no contempla la integración con plataformas de pago reales.
 
+<p align="center">
+ <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/0a82ae0f-a0ad-4284-9da5-7c74541bcd41" />
+<br>
+  <em>Pago</em>
+</p>
 
 
 ---
