@@ -22,7 +22,7 @@ builder.Services.AddScoped<OrderRepository>();
 builder.Services.AddScoped<CategoryService>();
 builder.Services.AddScoped<ProductServices>();
 builder.Services.AddScoped<OrderService>();
-
+builder.Services.AddScoped<UserService>();
 
 //Temporal De Usuario
 builder.Services.AddSession(options => { options.IdleTimeout = TimeSpan.FromMinutes(30);});
