@@ -33,6 +33,9 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
     {
         options.LoginPath = "/Account/Login";
         options.ExpireTimeSpan = TimeSpan.FromMinutes(30);
+
+        options.AccessDeniedPath = "/Home/Error";
+
     });
 
 var app = builder.Build();

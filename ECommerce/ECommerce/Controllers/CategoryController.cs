@@ -3,9 +3,12 @@ using ECommerce.Context;
 using System.Threading.Tasks;
 using ECommerce.Services;
 using ECommerce.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace ECommerce.Controllers
 {
+    [Authorize(Roles = "Admin")]
+
     public class CategoryController(CategoryService _categoryService) : Controller
     {
         public async Task<IActionResult> Index()

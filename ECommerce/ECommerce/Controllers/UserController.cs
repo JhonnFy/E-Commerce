@@ -8,6 +8,7 @@ using System.Security.Claims;
 
 namespace ECommerce.Controllers
 {
+    [Authorize]
     public class UserController(OrderService _orderService): Controller
     {
         public async Task<IActionResult> MyOrders()
