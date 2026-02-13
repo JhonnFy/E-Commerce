@@ -687,6 +687,12 @@ El presente ecommerce simulará el proceso de pago correspondiente a los product
 </p>
 
 🛠️ PASO 16: Restringir la URL
-
+<p align="center">
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/b037668d-effc-439a-a24d-8f65785de75d" />
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/68b939f9-faff-4a48-a4de-c89e57028168" />
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/5ee9d089-fb2c-46fa-92e5-28ed2140f647" />
+<br>
+  <em>Denegado</em>
+</p>
 
 ---
