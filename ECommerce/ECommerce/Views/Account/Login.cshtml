@@ -42,7 +42,6 @@
 
 <style>
 
-    /* Fondo blanco → gris suave */
     body {
         margin: 0;
         height: 100vh;
@@ -66,18 +65,16 @@
         z-index: 0;
         user-select: none;
         pointer-events: none;
-        background: linear-gradient(90deg, #dcdcdc, #cfcfcf);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+        color: #053345; /* ← COLOR QUE PEDISTE */
+        opacity: 0.08; /* sutil y elegante */
     }
 
-    /* Login totalmente transparente */
     .login-container {
         position: relative;
         z-index: 10;
         width: 340px;
         padding: 40px;
-        background: transparent; /* ← SIN fondo blanco */
+        background: transparent;
     }
 
         .login-container h2 {
@@ -85,40 +82,38 @@
             margin-bottom: 30px;
             font-weight: bold;
             letter-spacing: 2px;
-            color: #222;
+            color: #053345;
         }
 
-    /* Labels */
     label {
         font-size: 0.75rem;
         font-weight: 600;
-        color: #333;
+        color: #053345;
         display: block;
         margin-bottom: 6px;
     }
 
-    /* Inputs transparentes */
     .transparent-input {
         width: 100%;
         padding: 10px;
-        margin-bottom: 20px;
+        margin-bottom: 25px;
         border: none;
-        border-bottom: 1px solid rgba(0,0,0,0.4);
+        border-bottom: 1px solid rgba(5,51,69,0.4);
         background: transparent;
         font-size: 0.9rem;
         transition: 0.3s;
+        color: #053345;
     }
 
         .transparent-input:focus {
             outline: none;
-            border-bottom: 1px solid black;
+            border-bottom: 1px solid #053345;
         }
 
-    /* Botones minimalistas */
     .btn-login {
         width: 100%;
         padding: 10px;
-        background: black;
+        background: #053345;
         color: white;
         border: none;
         margin-bottom: 10px;
@@ -126,19 +121,20 @@
     }
 
         .btn-login:hover {
-            background: #333;
+            background: #042733;
         }
 
     .btn-register {
         width: 100%;
         padding: 10px;
         background: transparent;
-        border: 1px solid black;
+        border: 1px solid #053345;
+        color: #053345;
         transition: 0.3s;
     }
 
         .btn-register:hover {
-            background: black;
+            background: #053345;
             color: white;
         }
 
