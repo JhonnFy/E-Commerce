@@ -1,6 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using ECommerce.Models;
 using ECommerce.Services;
+using System.Security.Claims;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication;
 
 namespace ECommerce.Controllers
 {
@@ -25,6 +28,22 @@ namespace ECommerce.Controllers
             }
             else
             {
+                List<Claim> claims = new List<Claim>()
+                {
+                    new Claim(ClaimTypes.NameIdentifier, found.UserId.ToString()),
+                    new Claim(ClaimTypes.Name, found.FullName),
+                    new Claim(ClaimTypes.Email,found.Email),
+                    new Claim(ClaimTypes.Role,found.Type)
+                };
+
+                ClaimsIdentity claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+
+                await HttpContext.SignInAsync(
+                    CookieAuthenticationDefaults.AuthenticationScheme,
+                    new ClaimsPrincipal(claimsIdentity),
+                    new AuthenticationProperties() {AllowRefresh = true }
+                    );
+
                 return RedirectToAction("Index", "Home");
             }
         }
@@ -56,5 +75,11 @@ namespace ECommerce.Controllers
 
         }
 
+        public async Task<IActionResult> Logout()
+        {
+            await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+            return RedirectToAction("Index","Home");
+        }
+        
     }
 }

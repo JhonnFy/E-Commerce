@@ -3,6 +3,7 @@ using ECommerce.Services;
 using ECommerce.Utilities;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
+using System.Security.Claims;
 
 namespace ECommerce.Controllers
 {
@@ -108,9 +109,9 @@ namespace ECommerce.Controllers
             var cart = HttpContext.Session.Get<List<CartItemVM>>("Cart");
 
             //TODO: Change Id
-            int userId = 1;
+            var userId = HttpContext.User.FindFirst(ClaimTypes.NameIdentifier)!.Value;
 
-            await _orderService.AddAsync(cart,userId);
+            await _orderService.AddAsync(cart, int.Parse(userId));
 
             HttpContext.Session.Remove("Cart");
 
