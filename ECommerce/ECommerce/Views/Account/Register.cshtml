@@ -1,8 +1,8 @@
-﻿@model LoginVM;
+﻿@model UserVM;
 
 @{
     Layout = null;
-    ViewData["Title"] = "Login";
+    ViewData["Title"] = "Register";
 }
 
 <!DOCTYPE html>
@@ -14,15 +14,19 @@
 </head>
 <body>
 
+    <!-- Texto gigante de fondo -->
     <div class="background-text">
         E-COMMERCE
     </div>
 
-    <!-- Contenedor Login -->
+    <!-- Contenedor Register -->
     <div class="login-container">
-        <h2>LOGIN</h2>
+        <h2>REGISTER</h2>
 
-        <form action="/Account/Login" method="post">
+        <form action="/Account/Register" method="post">
+
+            <label>Full Name</label>
+            <input asp-for="FullName" type="text" class="transparent-input" autocomplete="off" />
 
             <label>Email</label>
             <input asp-for="Email" type="email" class="transparent-input" autocomplete="off" />
@@ -30,9 +34,13 @@
             <label>Password</label>
             <input asp-for="Password" type="password" class="transparent-input" autocomplete="off" />
 
-            <button type="submit" class="btn-login">Login</button>
-            <a href="/Account/Register" class="btn-register">Register</a>
+            <label>Repeat Password</label>
+            <input asp-for="RepeatPassword" type="password" class="transparent-input" autocomplete="off" />
 
+            <input type="hidden" name="Type" value="Client" />
+
+            <button class="btn-login" type="submit">Register</button>
+            <a href="/Account/Login" class="btn-register">Back</a>
         </form>
     </div>
 
@@ -64,10 +72,11 @@
         z-index: 0;
         user-select: none;
         pointer-events: none;
-        color: #053345; /* ← COLOR QUE PEDISTE */
-        opacity: 0.08; /* sutil y elegante */
+        color: #053345;
+        opacity: 0.08;
     }
 
+    /* Contenedor transparente */
     .login-container {
         position: relative;
         z-index: 10;
@@ -95,7 +104,7 @@
     .transparent-input {
         width: 100%;
         padding: 10px;
-        margin-bottom: 25px;
+        margin-bottom: 20px;
         border: none;
         border-bottom: 1px solid rgba(5,51,69,0.4);
         background: transparent;
@@ -109,6 +118,7 @@
             border-bottom: 1px solid #053345;
         }
 
+    /* Botones */
     .btn-login {
         width: 100%;
         padding: 10px;
