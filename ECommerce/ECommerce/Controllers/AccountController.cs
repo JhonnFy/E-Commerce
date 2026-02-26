@@ -32,17 +32,20 @@ namespace ECommerce.Controllers
                 {
                     new Claim(ClaimTypes.NameIdentifier, found.UserId.ToString()),
                     new Claim(ClaimTypes.Name, found.FullName),
-                    new Claim(ClaimTypes.Email,found.Email),
-                    new Claim(ClaimTypes.Role,found.Type)
+                    new Claim(ClaimTypes.Email, found.Email),
+                    new Claim(ClaimTypes.Role, found.Type)
                 };
 
-                ClaimsIdentity claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+                ClaimsIdentity claimsIdentity = new ClaimsIdentity(
+                    claims,
+                    CookieAuthenticationDefaults.AuthenticationScheme
+                );
 
                 await HttpContext.SignInAsync(
                     CookieAuthenticationDefaults.AuthenticationScheme,
                     new ClaimsPrincipal(claimsIdentity),
-                    new AuthenticationProperties() {AllowRefresh = true }
-                    );
+                    new AuthenticationProperties() { AllowRefresh = true }
+                );
 
                 return RedirectToAction("Index", "Home");
             }
@@ -63,23 +66,21 @@ namespace ECommerce.Controllers
             {
                 await _userService.Register(viewmodel);
                 ViewBag.message = "Your account has been registered, please try logging in.";
-                ViewBag.Class = "alert alert-success";
+                ViewBag.Class = "Alert alert-success";
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 ViewBag.message = ex.Message;
                 ViewBag.Class = "alert alert-danger";
             }
 
             return View();
-
         }
 
         public async Task<IActionResult> Logout()
         {
             await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
-            return RedirectToAction("Index","Home");
+            return RedirectToAction("Index", "Home");
         }
-        
     }
 }

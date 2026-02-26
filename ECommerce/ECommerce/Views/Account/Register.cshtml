@@ -15,6 +15,8 @@
     <!-- Font Awesome -->
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
 
@@ -25,13 +27,13 @@
     <div class="login-container">
         <h2>REGISTER</h2>
 
-        <form action="/Account/Register" method="post">
+        <form id="registerForm" action="/Account/Register" method="post">
 
             <label>Full Name</label>
-            <input asp-for="FullName" type="text" class="transparent-input" autocomplete="off" />
+            <input asp-for="FullName" type="text" class="transparent-input" id="FullName" autocomplete="off" />
 
             <label>Email</label>
-            <input asp-for="Email" type="email" class="transparent-input" autocomplete="off" />
+            <input asp-for="Email" type="email" class="transparent-input" id="Email" autocomplete="off" />
 
             <!-- PASSWORD -->
             <label class="password-label">
@@ -39,12 +41,7 @@
                 <i class="fa-regular fa-eye toggle-password"
                    onclick="togglePassword(this, 'passwordInput')"></i>
             </label>
-
-            <input asp-for="Password"
-                   type="password"
-                   id="passwordInput"
-                   class="transparent-input"
-                   autocomplete="off" />
+            <input asp-for="Password" type="password" id="passwordInput" class="transparent-input" autocomplete="off" />
 
             <!-- REPEAT PASSWORD -->
             <label class="password-label">
@@ -52,12 +49,7 @@
                 <i class="fa-regular fa-eye toggle-password"
                    onclick="togglePassword(this, 'repeatPasswordInput')"></i>
             </label>
-
-            <input asp-for="RepeatPassword"
-                   type="password"
-                   id="repeatPasswordInput"
-                   class="transparent-input"
-                   autocomplete="off" />
+            <input asp-for="RepeatPassword" type="password" id="repeatPasswordInput" class="transparent-input" autocomplete="off" />
 
             <input type="hidden" name="Type" value="Client" />
 
@@ -70,7 +62,6 @@
     <script>
         function togglePassword(icon, inputId) {
             const input = document.getElementById(inputId);
-
             if (input.type === "password") {
                 input.type = "text";
                 icon.classList.remove("fa-eye");
@@ -81,12 +72,40 @@
                 icon.classList.add("fa-eye");
             }
         }
+
+        // VALIDACIÓN DE CAMPOS VACÍOS
+        document.getElementById('registerForm').addEventListener('submit', function(e) {
+            const fullName = document.getElementById('FullName').value.trim();
+            const email = document.getElementById('Email').value.trim();
+            const password = document.getElementById('passwordInput').value.trim();
+            const repeatPassword = document.getElementById('repeatPasswordInput').value.trim();
+
+            if (!fullName || !email || !password || !repeatPassword) {
+                e.preventDefault();
+                Swal.fire({
+                    icon: 'warning',
+                    text: 'Todos Los Campos Son Obligatorios'
+                });
+            }
+        });
     </script>
+
+    @* ALERTAS DESDE EL CONTROLADOR *@
+    @if (ViewBag.message != null)
+    {
+        <script>
+            Swal.fire({
+                icon: '@(ViewBag.Class != null && ViewBag.Class.Contains("success") ? "success" : "error")',
+                title: '@ViewBag.message'
+            });
+        </script>
+    }
 
 </body>
 </html>
 
 <style>
+    /* TODO: mantener estilos originales */
     * {
         box-sizing: border-box;
     }
@@ -175,8 +194,7 @@
             border-bottom: 1px solid #053345;
         }
 
-    .btn-login,
-    .btn-register {
+    .btn-login, .btn-register {
         display: block;
         width: 100%;
         padding: 10px;

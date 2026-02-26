@@ -33,6 +33,17 @@
     </style>
 </head>
 <body>
+
+    @if (ViewBag.message != null)
+    {
+        <script>
+            Swal.fire({
+                icon: '@(ViewBag.Class != null && ViewBag.Class.Contains("success") ? "success" : "error")',
+                title: '@ViewBag.message'
+            });
+        </script>
+    }
+
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container-fluid">
@@ -82,8 +93,6 @@
                                 <a class="btn btn-outline-dark" href="/Account/Login">Log In</a>
                             </li>
                         }
-
-
 
                     </ul>
                 </div>
