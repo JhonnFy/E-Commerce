@@ -65,7 +65,7 @@ namespace ECommerce.Controllers
             try
             {
                 await _userService.Register(viewmodel);
-                ViewBag.message = "Your account has been registered, please try logging in.";
+                ViewBag.message = "Cuenta Registrada.";
                 ViewBag.Class = "Alert alert-success";
             }
             catch (Exception ex)
