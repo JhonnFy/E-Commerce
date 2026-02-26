@@ -11,15 +11,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewData["Title"]</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
-    <!-- Texto gigante de fondo -->
     <div class="background-text">
         E-COMMERCE
     </div>
 
-    <!-- Contenedor Register -->
     <div class="login-container">
         <h2>REGISTER</h2>
 
@@ -31,29 +33,64 @@
             <label>Email</label>
             <input asp-for="Email" type="email" class="transparent-input" autocomplete="off" />
 
-            <label>Password</label>
-            <input asp-for="Password" type="password" class="transparent-input" autocomplete="off" />
+            <!-- PASSWORD -->
+            <label class="password-label">
+                Password
+                <i class="fa-regular fa-eye toggle-password"
+                   onclick="togglePassword(this, 'passwordInput')"></i>
+            </label>
 
-            <label>Repeat Password</label>
-            <input asp-for="RepeatPassword" type="password" class="transparent-input" autocomplete="off" />
+            <input asp-for="Password"
+                   type="password"
+                   id="passwordInput"
+                   class="transparent-input"
+                   autocomplete="off" />
+
+            <!-- REPEAT PASSWORD -->
+            <label class="password-label">
+                Repeat Password
+                <i class="fa-regular fa-eye toggle-password"
+                   onclick="togglePassword(this, 'repeatPasswordInput')"></i>
+            </label>
+
+            <input asp-for="RepeatPassword"
+                   type="password"
+                   id="repeatPasswordInput"
+                   class="transparent-input"
+                   autocomplete="off" />
 
             <input type="hidden" name="Type" value="Client" />
 
             <button class="btn-login" type="submit">Register</button>
             <a href="/Account/Login" class="btn-register">Back</a>
+
         </form>
     </div>
+
+    <script>
+        function togglePassword(icon, inputId) {
+            const input = document.getElementById(inputId);
+
+            if (input.type === "password") {
+                input.type = "text";
+                icon.classList.remove("fa-eye");
+                icon.classList.add("fa-eye-slash");
+            } else {
+                input.type = "password";
+                icon.classList.remove("fa-eye-slash");
+                icon.classList.add("fa-eye");
+            }
+        }
+    </script>
 
 </body>
 </html>
 
 <style>
-    /* Reset general */
     * {
         box-sizing: border-box;
     }
 
-    /* Body y fondo */
     body {
         margin: 0;
         height: 100vh;
@@ -65,7 +102,6 @@
         overflow: hidden;
     }
 
-    /* Texto gigante atravesado */
     .background-text {
         position: fixed;
         top: 50%;
@@ -81,14 +117,11 @@
         opacity: 0.08;
     }
 
-    /* Contenedor formulario */
     .login-container {
         position: relative;
         z-index: 10;
         width: 480px;
-        ; /* ancho fijo igual al Login */
         padding: 40px;
-        background: transparent;
     }
 
         .login-container h2 {
@@ -99,7 +132,6 @@
             color: #053345;
         }
 
-    /* Labels */
     label {
         font-size: 0.75rem;
         font-weight: 600;
@@ -108,7 +140,23 @@
         margin-bottom: 6px;
     }
 
-    /* Inputs transparentes */
+    .password-label {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .toggle-password {
+        cursor: pointer;
+        font-size: 0.9rem;
+        color: #053345;
+        transition: 0.2s;
+    }
+
+        .toggle-password:hover {
+            opacity: 0.7;
+        }
+
     .transparent-input {
         width: 100%;
         padding: 10px;
@@ -127,12 +175,11 @@
             border-bottom: 1px solid #053345;
         }
 
-    /* Botones unificados */
     .btn-login,
     .btn-register {
-        display: block; /* ancho completo */
-        width: 100%; /* igual al botón Login */
-        padding: 10px; /* mismo tamaño visual */
+        display: block;
+        width: 100%;
+        padding: 10px;
         font-size: 0.9rem;
         line-height: 1.3;
         text-align: center;
@@ -141,7 +188,6 @@
         margin-bottom: 10px;
     }
 
-    /* Botón Login */
     .btn-login {
         background: #053345;
         color: white;
@@ -152,17 +198,15 @@
             background: #042733;
         }
 
-    /* Botón Register / Back */
     .btn-register {
         background: transparent;
         border: 1px solid #053345;
         color: #053345;
-        text-decoration: none; /* quita subrayado del enlace */
+        text-decoration: none;
     }
 
         .btn-register:hover {
             background: #053345;
             color: white;
         }
-
 </style>
