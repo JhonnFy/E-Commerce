@@ -11,6 +11,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewData["Title"]</title>
+
+    <!-- Font Awesome para iconos -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
@@ -18,7 +22,6 @@
         E-COMMERCE
     </div>
 
-    <!-- Contenedor Login -->
     <div class="login-container">
         <h2>LOGIN</h2>
 
@@ -27,8 +30,18 @@
             <label>Email</label>
             <input asp-for="Email" type="email" class="transparent-input" autocomplete="off" />
 
-            <label>Password</label>
-            <input asp-for="Password" type="password" class="transparent-input" autocomplete="off" />
+            <!-- LABEL con ojito al lado -->
+            <label class="password-label">
+                Password
+                <i class="fa-regular fa-eye toggle-password"
+                   onclick="togglePassword(this)"></i>
+            </label>
+
+            <input asp-for="Password"
+                   type="password"
+                   class="transparent-input"
+                   id="passwordInput"
+                   autocomplete="off" />
 
             <button type="submit" class="btn-login">Login</button>
             <a href="/Account/Register" class="btn-register">Register</a>
@@ -36,18 +49,32 @@
         </form>
     </div>
 
+    <script>
+        function togglePassword(icon) {
+            const input = document.getElementById("passwordInput");
+
+            if (input.type === "password") {
+                input.type = "text";
+                icon.classList.remove("fa-eye");
+                icon.classList.add("fa-eye-slash");
+            } else {
+                input.type = "password";
+                icon.classList.remove("fa-eye-slash");
+                icon.classList.add("fa-eye");
+            }
+        }
+    </script>
+
 </body>
 </html>
 
 <style>
-    /* Aplicar box-sizing a todo */
     *,
     *::before,
     *::after {
         box-sizing: border-box;
     }
 
-    /* Body y fondo */
     body {
         margin: 0;
         height: 100vh;
@@ -59,7 +86,6 @@
         overflow: hidden;
     }
 
-    /* Texto gigante atravesado */
     .background-text {
         position: fixed;
         top: 50%;
@@ -75,15 +101,12 @@
         opacity: 0.08;
     }
 
-    /* Contenedor formulario */
     .login-container {
         position: relative;
         z-index: 10;
-        width: 480px; /* <-- ancho aumentado desde 340px */
+        width: 480px;
         padding: 40px;
-        background: transparent;
     }
-
 
         .login-container h2 {
             text-align: center;
@@ -101,7 +124,24 @@
         margin-bottom: 6px;
     }
 
-    /* Inputs transparentes */
+    /* Label especial para password */
+    .password-label {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .toggle-password {
+        cursor: pointer;
+        font-size: 0.9rem;
+        color: #053345;
+        transition: 0.2s;
+    }
+
+        .toggle-password:hover {
+            opacity: 0.7;
+        }
+
     .transparent-input {
         width: 100%;
         padding: 10px;
@@ -119,7 +159,6 @@
             border-bottom: 1px solid #053345;
         }
 
-    /* Botones unificados Login y Register */
     .btn-login,
     .btn-register {
         display: block;
@@ -133,7 +172,6 @@
         text-decoration: none;
     }
 
-    /* Botón Login */
     .btn-login {
         background: #053345;
         color: white;
@@ -144,7 +182,6 @@
             background: #042733;
         }
 
-    /* Botón Register / Back */
     .btn-register {
         background: transparent;
         border: 1px solid #053345;
@@ -155,5 +192,4 @@
             background: #053345;
             color: white;
         }
-
 </style>
