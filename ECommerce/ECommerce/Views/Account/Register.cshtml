@@ -237,8 +237,12 @@
     {
         <script>
             Swal.fire({
-                icon: '@(ViewBag.Class != null && ViewBag.Class.Contains("success") ? "success" : "error")',
+                icon: '@ViewBag.Class',
                 title: '@ViewBag.message'
+            }).then((result) => {
+                if (result.isConfirmed && '@ViewBag.Class' === 'success') {
+                    window.location.href = '/Account/Login';
+                }
             });
         </script>
     }

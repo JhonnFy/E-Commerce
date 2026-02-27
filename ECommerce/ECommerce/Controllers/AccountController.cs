@@ -60,7 +60,8 @@ namespace ECommerce.Controllers
         [HttpPost]
         public async Task<IActionResult> Register(UserVM viewmodel)
         {
-            if (!ModelState.IsValid) return View(viewmodel);
+            if (!ModelState.IsValid)
+                return View(viewmodel);
 
             try
             {
@@ -69,12 +70,12 @@ namespace ECommerce.Controllers
                 ModelState.Clear();
 
                 ViewBag.message = "Cuenta Registrada.";
-                ViewBag.Class = "Alert alert-success";
+                ViewBag.Class = "success";
             }
             catch (Exception ex)
             {
                 ViewBag.message = ex.Message;
-                ViewBag.Class = "alert alert-danger";
+                ViewBag.Class = "error";
             }
 
             return View();
