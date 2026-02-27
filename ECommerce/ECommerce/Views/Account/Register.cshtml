@@ -219,13 +219,16 @@
             const password = document.getElementById('passwordInput').value.trim();
             const repeatPassword = document.getElementById('repeatPasswordInput').value.trim();
 
-            if (!fullName || !email || !password || !repeatPassword) {
-                e.preventDefault();
-                Swal.fire({
-                    icon: 'warning',
-                    text: 'Todos Los Campos Son Obligatorios'
-                });
-            }
+                    if (!fullName || !email || !password || !repeatPassword) 
+                    {
+                        e.preventDefault();
+                        Swal.fire({
+                        icon: 'warning',
+                        text: 'Todos Los Campos Son Obligatorios'
+                        }).then(() => {
+                        document.getElementById("registerForm").reset();
+                        });
+                    }
         });
     </script>
 

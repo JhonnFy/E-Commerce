@@ -65,6 +65,9 @@ namespace ECommerce.Controllers
             try
             {
                 await _userService.Register(viewmodel);
+
+                ModelState.Clear();
+
                 ViewBag.message = "Cuenta Registrada.";
                 ViewBag.Class = "Alert alert-success";
             }
