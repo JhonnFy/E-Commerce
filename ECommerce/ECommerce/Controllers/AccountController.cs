@@ -18,7 +18,14 @@ namespace ECommerce.Controllers
         [HttpPost]
         public async Task<IActionResult> Login(LoginVM viewmodel)
         {
-            if (!ModelState.IsValid) return View(viewmodel);
+
+            if (!ModelState.IsValid)
+            {
+                ViewBag.message = "Todos Los Campos Son Obligatorios";
+                ViewBag.Class = "warning";
+                return View(viewmodel);
+            }
+
             var found = await _userService.Login(viewmodel);
 
             if (found.UserId == 0)

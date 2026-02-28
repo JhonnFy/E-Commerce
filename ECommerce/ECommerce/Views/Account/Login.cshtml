@@ -167,16 +167,16 @@
     </div>
 
     <div class="login-container">
-        <h2>LOGIN</h2>
+        <h2>Ingresá o regístrate</h2>
 
         <form action="/Account/Login" method="post">
 
-            <label>Email</label>
+            <label>E-mail</label>
             <input asp-for="Email" type="email" class="transparent-input" autocomplete="off" />
 
             <!-- LABEL con ojito al lado -->
             <label class="password-label">
-                Password
+                Contraseña
                 <i class="fa-regular fa-eye toggle-password"
                    onclick="togglePassword(this)"></i>
             </label>
@@ -215,7 +215,7 @@
         <script>
             Swal.fire({
                 icon: '@ViewBag.Class',
-                title: '@ViewBag.message'
+                text: '@ViewBag.message'
             });
         </script>
     }
