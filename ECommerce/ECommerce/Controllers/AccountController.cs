@@ -30,9 +30,10 @@ namespace ECommerce.Controllers
 
             if (found.UserId == 0)
             {
+                ModelState.Clear();
                 ViewBag.message = "Datos De Acceso Incorrectos";
                 ViewBag.Class = "error";
-                return View(viewmodel);
+                return View(new LoginVM());
             }
             else
             {
@@ -82,6 +83,7 @@ namespace ECommerce.Controllers
             }
             catch (Exception ex)
             {
+                ModelState.Clear();
                 ViewBag.message = ex.Message;
                 ViewBag.Class = "error";
             }
