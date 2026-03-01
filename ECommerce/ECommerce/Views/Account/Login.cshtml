@@ -157,11 +157,46 @@
             box-shadow: none !important;
         }
 
+        .top-back-link {
+            position: absolute;
+            top: 112px;
+            left: 90px;
+            z-index: 20;
+        }
+
+        .back-link {
+            font-size: 0.75rem;
+            color: #053345;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+            .back-link:hover {
+                opacity: 0.7;
+            }
+
+        /*Logo*/
+        .brand-logo {
+            position: absolute;
+            top: 60px; 
+            left: 60px;
+            height: 70px;
+            z-index: 20;
+        }
+
     </style>
 
 </head>
 <body>
 
+    <img src="~/logos/LogoV2.png" class="brand-logo" />
+
+    <div class="top-back-link">
+        <a href="/" class="back-link">
+            ← Regresar Al Catálogo
+        </a>
+    </div>
+    
     <div class="background-text">
         E-COMMERCE
     </div>
@@ -194,7 +229,7 @@
             <!--Regresar Al Catálogo-->
             <div style="text-align: left; margin-bottom: 10px;">
                 <a href="/" style="font-size:0.75rem; color:#053345; text-decoration:none;">
-                    ← Regresar Al Catálogo
+                    ¿Olvidaste Tus Datos De Acceso?
                 </a>
             </div>
 
