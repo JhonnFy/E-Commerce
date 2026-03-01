@@ -156,6 +156,24 @@
             box-shadow: none !important;
         }
 
+        .top-back-link {
+            position: absolute;
+            top: 120px; /* ajusta a tu gusto */
+            left: 60px; /* alineado con el logo */
+            z-index: 20;
+        }
+
+        .back-link {
+            font-size: 0.75rem;
+            color: #053345;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+            .back-link:hover {
+                opacity: 0.7;
+            }
+
         /*Logo*/
         .brand-logo {
             position: absolute;
@@ -170,6 +188,12 @@
 <body>
 
     <img src="~/logos/LogoV2.png" class="brand-logo" />
+
+    <div class="top-back-link">
+        <a href="/" class="back-link">
+            ← Regresar Al Catálogo
+        </a>
+    </div>
 
     <div class="background-text">
         E-COMMERCE
@@ -205,7 +229,9 @@
             <input type="hidden" name="Type" value="Client" />
 
             <button class="btn-login" type="submit">Register</button>
+            <!--
             <a href="/Account/Login" class="btn-register">Back</a>
+             -->
 
         </form>
     </div>
