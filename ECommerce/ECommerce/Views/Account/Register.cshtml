@@ -158,8 +158,8 @@
 
         .top-back-link {
             position: absolute;
-            top: 120px; /* ajusta a tu gusto */
-            left: 60px; /* alineado con el logo */
+            top: 112px;
+            left: 90px;
             z-index: 20;
         }
 
@@ -204,15 +204,15 @@
 
         <form id="registerForm" action="/Account/Register" method="post">
 
-            <label>Full Name</label>
+            <label>Usuario</label>
             <input asp-for="FullName" type="text" class="transparent-input" id="FullName" autocomplete="off" />
 
-            <label>Email</label>
+            <label>E-mail</label>
             <input asp-for="Email" type="email" class="transparent-input" id="Email" autocomplete="off" />
 
             <!-- PASSWORD -->
             <label class="password-label">
-                Password
+                Credencial
                 <i class="fa-regular fa-eye toggle-password"
                    onclick="togglePassword(this, 'passwordInput')"></i>
             </label>
@@ -220,7 +220,7 @@
 
             <!-- REPEAT PASSWORD -->
             <label class="password-label">
-                Repeat Password
+                Confirmar Credencial
                 <i class="fa-regular fa-eye toggle-password"
                    onclick="togglePassword(this, 'repeatPasswordInput')"></i>
             </label>
