@@ -262,7 +262,9 @@
                         e.preventDefault();
                         Swal.fire({
                         icon: 'warning',
-                        text: 'Todos Los Campos Son Obligatorios'
+                        text: 'Todos Los Campos Son Obligatorios',
+                        heightAuto: false,
+                        scrollbarPadding: false
                         }).then(() => {
                         document.getElementById("registerForm").reset();
                         });
@@ -276,7 +278,9 @@
         <script>
             Swal.fire({
                 icon: '@ViewBag.Class',
-                title: '@ViewBag.message'
+                text: '@ViewBag.message',
+                scrollbarPadding: false,
+                heightAuto: false
             }).then((result) => {
                 if (result.isConfirmed && '@ViewBag.Class' === 'success') {
                     window.location.href = '/Account/Login';
