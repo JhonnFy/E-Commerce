@@ -113,6 +113,7 @@ Aplicación desarrollada en .NET 9 MVC
 ---
 ## ComoFueCreado
 🛠️ **PASO1:** Configuración Inicial Del proyecto
+<img width="1163" height="449" alt="image" src="https://github.com/user-attachments/assets/79e244e1-c14a-4c41-811e-72979910c7bc" />
 <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/e33ff26d-398e-4073-982f-351c60e40906" />
 <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/db95ba8c-631c-4702-9282-562346b7298f" />
 <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/f23f7616-bd52-4370-ac77-f45a57c3e6fd" />
